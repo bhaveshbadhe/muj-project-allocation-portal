@@ -1,0 +1,448 @@
+
+
+/* common css  */
+
+
+
+/* Import Montserrat font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+
+/* Base Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+
+
+/* Form and floating labels */
+.form-control {
+  border: none;
+  border-bottom: 3px solid orange;
+  background: transparent;
+}
+
+label {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(236, 76, 8);
+  text-shadow: 2px 2px 2px white;
+  transition: all 0.3s ease;
+}
+
+.form-group {
+  position: relative;
+  margin-top: 40px;
+}
+
+.form-group label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-100%);
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.form-control:focus + label,
+.form-control:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 0;
+  font-size: 18px;
+  color: rgb(236, 76, 8);
+}
+
+/* Make the label stay at the top */
+.label-fixed {
+  top: -20px;
+  font-size: 18px;
+  color: rgb(236, 76, 8);
+}
+
+
+#backgroundmujlogo{
+position: relative; /* Ensures proper positioning for the pseudo-element */
+background-color: white;
+padding: 10px;
+z-index: 1; /* Keeps the content above the background image */
+}
+
+
+.img-fluid{
+opacity: 0.9;
+position: absolute;
+}
+.mujlogo{
+max-width: 200px;
+position:relative;
+
+ z-index:1;
+ opacity:0.8;
+}
+
+#border {
+position: relative;
+overflow: hidden;
+border-radius:50px;
+box-shadow:2px 2px 20px 2px black;
+}
+
+#border::before {
+content: '';
+position: absolute;
+width: 0;
+height: 0;
+border-style: solid;
+border-color: transparent;
+bottom: 0;
+left: 0;
+border-bottom: 2px solid #e45f06; /* Orange bottom border */
+transition: all 0.5s ease-in-out;
+}
+
+#border::after {
+content: '';
+position: absolute;
+width: 0;
+height: 0;
+border-style: solid;
+border-color: transparent;
+bottom: 0;
+right: 0;
+border-right: 2px solid #e45f06; /* Orange right border */
+transition: all 0.5s ease-in-out;
+}
+
+#border:hover::before {
+width: 100%; /* Draw the bottom border */
+transition: width 0.5s ease-in-out;
+}
+
+#border:hover::after {
+height: 100%; /* Draw the right border */
+transition: height 0.5s 0.5s ease-in-out; /* Delay after bottom border */
+}
+
+#border::after, #border::before {
+z-index: 2;
+}
+
+#border:hover {
+position: relative;
+z-index: 2;
+border-top: 2px solid #e45f06; /* Draw top border */
+border-left: 2px solid #e45f06; /* Draw left border */
+animation: draw-border 1.5s ease forwards;
+}
+
+/* Keyframes for the animation */
+@keyframes draw-border {
+0% {
+    border-width: 0;
+}
+25% {
+    border-left-width: 2px;
+}
+50% {
+    border-top-width: 2px;
+}
+75% {
+    border-right-width: 2px;
+}
+100% {
+    border-bottom-width: 2px;
+}
+}
+
+/* Mobile and responsiveness */
+@media (max-width: 750px) {
+  h4, h3 {
+    font-size: 1.5rem;
+  }
+
+    body {
+
+background-size: cover; /* Ensures the image covers the entire background */
+background-position: center; /* Centers the image */
+background-repeat: no-repeat; /* Prevents the image from repeating */
+background-attachment: fixed; /* Keeps the image fixed during scroll */
+}
+
+
+
+
+}
+.fade-in {
+opacity: 0;
+transition: opacity 2s ease-in-out;
+animation: fadeEffect 2s forwards;
+}
+
+@keyframes fadeEffect {
+to {
+    opacity: 1;
+}
+}
+.card-body-img {
+
+    height: 100%;
+    box-shadow: 10px -15px 15px 10px rgba(255, 255, 255, 1); /* White shadow on the right */
+    }
+    
+    
+:root {
+  --primary-orange: #ff6b2b;
+  --secondary-orange: #ff8c42;
+  --light-orange: #fff1e6;
+}
+
+.btn-orange { background-color: var(--primary-orange); color: white; border: none; }
+.btn-orange:hover { background-color: var(--secondary-orange); color: white; }
+.notice-card { border-left: 4px solid var(--primary-orange); margin-bottom: 1rem; transition: transform 0.2s; }
+.notice-card:hover { transform: translateX(5px); }
+.nav-pills .nav-link.active { background-color: var(--primary-orange); }
+.nav-pills .nav-link { color: var(--primary-orange); }
+.section-title { color: var(--primary-orange); border-bottom: 2px solid var(--light-orange); padding-bottom: 0.5rem; }
+.admin-notice { border-left-color: #2b7fff; }
+
+
+
+
+ /* Base Button Styling */
+ .btn {
+  position: relative;
+  margin: 10px;
+  color: white;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  overflow: hidden;
+  cursor: pointer;
+
+  /* Smooth Transitions */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              transform 0.1s ease-in-out;
+
+  /* Prevent Text Selection */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Background Overlay Effect */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      120deg, 
+      transparent, 
+      rgba(255, 255, 255, 0.3), 
+      transparent
+  );
+  
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+/* Hover Effects */
+.btn:hover {
+  background-color: white;
+  transform: translateY(-3px);
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:active {
+  transform: translateY(1px);
+  transition: all 0.1s ease;
+}
+
+.btn span {
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+/* Red Button Styles */
+#btnred {
+
+  color: rgb(252, 4, 4);
+
+  background-color: rgb(242, 240, 241); /* Red */
+  border:2px solid red;
+}
+
+#btnred:hover {
+  background-color: rgb(253, 10, 34); /* Red */
+  color:white;
+  box-shadow: 0 5px 15px rgba(253, 10, 34, 0.85);
+}
+
+#btnred:active {
+  box-shadow: 0 2px 5px rgba(253, 10, 34, 0.2);
+}
+
+#btnred:focus {
+  box-shadow: 0 0 0 3px rgb(253, 10, 34);
+}
+
+/* Orange Button Styles */
+#btnorange {
+  background-color: rgb(255, 87, 34); /* Orange */
+}
+
+#btnorange:hover {
+  color: rgb(255, 64, 0);
+  box-shadow: 0 5px 15px rgba(255, 86, 34, 0.95);
+  border: 2px solid rgba(255, 86, 34, 0.95);
+  background-color: rgb(247, 247, 247); /* Orange */
+  
+}
+
+#btnorange:active {
+  box-shadow: 0 2px 5px rgba(255, 86, 34, 0.82);
+}
+
+#btnorange:focus {
+  box-shadow: 0 0 0 3px rgb(255, 87, 34);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .btn {
+      padding: 10px 25px;
+      font-size: 14px;
+  }
+}
+
+
+
+
+.password-container {
+  position: relative;
+}
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #6c757d;
+}
+.alert {
+  animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+        
+        :root {
+  
+       --secondary-color: #6c757d;
+       --accent-color: #ff6b00;
+       --light-bg: #f8f9fa;
+   }
+
+        .bg-custom {
+   background-color: var(--accent-color);
+}
+        
+   /* Custom header style */
+   header.custom-header {
+       background-color: var(--accent-color);
+       height: 60px;
+       position: fixed;
+       width: 100%;
+       top: 0;
+       left: 0;
+       z-index: 1000;
+   }
+
+   .custom-header .container {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       height: 100%;
+   }
+
+   .custom-header .ms-auto {
+       display: flex;
+       align-items: center;
+   }
+
+   .custom-header .badge {
+       font-size: 12px;
+       display: inline-block;
+   }
+
+
+
+   .custom-footer {
+       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+       background: white;
+   color:rgb(0, 0, 0); /* Dark gray */
+   height: 60px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 16px;
+   margin-top: 20px; /* Adds space between the content and the footer */
+}
+
+@media (max-width: 768px) {
+   .custom-footer {
+       font-size: 14px; /* Smaller font for mobile */
+   }
+}
+
+
+
+
+
+.nav-pills .nav-link {
+  color: var(--secondary-color);
+  transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link.active {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.card-custom {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}

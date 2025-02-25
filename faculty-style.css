@@ -1,0 +1,327 @@
+/* Import Montserrat font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: rgb(236, 76, 8);
+  position: relative;
+  display: inline-block;
+}
+
+/* Underline effect on headings */
+h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  background-color: #e45f06;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+  animation: draw 0.5s forwards;
+}
+
+@keyframes draw {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+h1:hover::after, h2:hover::after, h3:hover::after, h4:hover::after, h5:hover::after, h6:hover::after {
+  transform: scaleX(1);
+}
+
+
+
+/* Form styles */
+.form-label {
+  color: #e45f06;
+  margin-top: 10px;
+}
+
+.form-control {
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  color: #495057;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.form-control:focus, .form-control:hover {
+  background-color: #f8f9fa;
+  border-color: #80bdff;
+  box-shadow: none;
+}
+
+/* Card styles */
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  font-weight: bolder;
+  transition: box-shadow 0.3s ease;
+}
+
+
+/* Profile card styles */
+.profile-card {
+    max-width: 500px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    transition: transform 0.1s;
+    position: relative;
+    padding: 5px;
+}
+.profile-card:hover {
+    transform: perspective(1000px) rotateY(10deg) rotateX(5deg);
+}
+
+.profile-card h2 {
+    margin: 20px 0;
+    color: #e45f06;
+    text-align: center;
+}
+.profile-card p, .profile-card label {
+    color: #333;
+    margin: 6px 0;
+}
+.profile-card label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #e45f06;
+}
+.profile-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+  border: 5px solid #e45f06;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Background styles */
+#backgroundmujlogo {
+  background-color: white;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+
+
+
+  /* Form and floating labels */
+  .form-control {
+    border: none;
+    border-bottom: 3px solid orange;
+    background: transparent;
+  }
+  
+  label {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(236, 76, 8);
+    text-shadow: 2px 2px 2px white;
+    transition: all 0.3s ease;
+  }
+  
+  .form-group {
+    position: relative;
+    margin-top: 40px;
+  }
+  
+  .form-group label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-100%);
+    font-size: 18px;
+    pointer-events: none;
+  }
+  
+  .form-control:focus + label,
+  .form-control:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 0;
+    font-size: 18px;
+    color: rgb(236, 76, 8);
+  }
+  
+  /* Make the label stay at the top */
+  .label-fixed {
+    top: -20px;
+    font-size: 18px;
+    color: rgb(236, 76, 8);
+  }
+
+
+        
+     
+        
+     
+        
+    .badge.bg-success {
+      background-color: rgba(46, 204, 113, 0.15) !important;
+      color: rgba(27, 179, 90, 0.96);
+  }
+  
+
+
+  
+ 
+  
+  /* Responsive fixes */
+  @media (max-width: 768px) {
+    .filter-section .col-md-4 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Custom colors for allocated students */
+.status-allowed {
+    background-color: rgba(46, 204, 113, 0.05) !important;
+    border-left: 3px solid rgba(8, 98, 45, 0.533) !important;
+}
+
+.status-declined {
+    background-color: rgba(231, 76, 60, 0.05) !important;
+    border-left: 3px solid var(--danger-color) !important;
+}
+
+     
+        
+table {
+  width: 100%;
+  font-size: 14px;
+  color: #495057;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+thead th {
+  font-weight: bold;
+  color: #212529;
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #e9ecef;
+  padding: 12px 16px;
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+tbody td {
+  padding: 16px;
+  vertical-align: middle;
+  border-bottom: 1px solid #f0f0f0;
+  font-weight:lighter;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f8f9fc;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+  .search-wrapper {
+      margin-top: 16px;
+  }
+}
+        
+  
+  
+
+/* Define light colors */
+.table-light-1 { background-color: #f0f8ff; } /* Alice Blue */
+.table-light-2 { background-color: #f5f5dc; } /* Beige */
+.table-light-3 { background-color: #faf0e6; } /* Linen */
+.table-light-4 { background-color: #ffebcd; } /* Blanched Almond */
+.table-light-5 { background-color: #fffaf0; } /* Floral White */
+.table-light-6 { background-color: #faebd7; } /* Antique White */
+.table-light-7 { background-color: #fffacd; } /* Lemon Chiffon */
+.table-light-8 { background-color: #f0fff0; } /* Honeydew */
+.table-light-9 { background-color: #f5fffa; } /* Mint Cream */
+.table-light-10 { background-color: #f0ffff; } /* Azure */
+.table-light-11 { background-color: #e6e6fa; } /* Lavender */
+.table-light-12 { background-color: #fff0f5; } /* Lavender Blush */
+.table-light-13 { background-color: #fff5ee; } /* Seashell */
+.table-light-14 { background-color: #fdf5e6; } /* Old Lace */
+.table-light-15 { background-color: #f5f5f5; } /* White Smoke */
+.table-light-16 { background-color: #f5f5f5; } /* White Smoke */
+.table-light-17 { background-color: #f0f5f5; } /* Light Gray */
+.table-light-18 { background-color: #f5f0f5; } /* Light Pink */
+.table-light-19 { background-color: #fafad2; } /* Light Goldenrod Yellow */
+.table-light-20 { background-color: #f0f8f0; } /* Light Mint */
+.table-light-21 { background-color: #f5f0f0; } /* Light Rose */
+.table-light-22 { background-color: #f5f5dc; } /* Light Beige */
+.table-light-23 { background-color: #f5f5f5; } /* Light Smoke */
+.table-light-24 { background-color: #f0fff0; } /* Light Honeydew */
+.table-light-25 { background-color: #f5f5f5; } /* Light White Smoke */
+.table-light-26 { background-color: #fdfd96; } /* Light Lemon */
+.table-light-27 { background-color: #f5f0ff; } /* Light Lavender */
+.table-light-28 { background-color: #f5e4e4; } /* Light Coral */
+.table-light-29 { background-color: #faf0e6; } /* Light Linen */
+.table-light-30 { background-color: #f0ffff; } /* Light Azure */
+.table-light-31 { background-color: #f0f8ff; } /* Light Alice Blue */
+.table-light-32 { background-color: #f5f5dc; } /* Light Beige */
+.table-light-33 { background-color: #f0f5f5; } /* Light Light Gray */
+.table-light-34 { background-color: #f5f5f5; } /* Light White Smoke */
+.table-light-35 { background-color: #f0f8ff; } /* Light Alice Blue */
+.table-light-36 { background-color: #f5f5dc; } /* Light Beige */
+.table-light-37 { background-color: #faf0e6; } /* Light Linen */
+.table-light-38 { background-color: #fffaf0; } /* Light Floral White */
+.table-light-39 { background-color: #f5fffa; } /* Light Mint Cream */
+.table-light-40 { background-color: #f0ffff; } /* Light Azure */
+.table-light-41 { background-color: #e6e6fa; } /* Light Lavender */
+.table-light-42 { background-color: #fff0f5; } /* Light Lavender Blush */
+.table-light-43 { background-color: #fff5ee; } /* Light Seashell */
+.table-light-44 { background-color: #fdf5e6; } /* Light Old Lace */
+.table-light-45 { background-color: #f5f5f5; } /* Light White Smoke */
+.table-light-46 { background-color: #f5f0f5; } /* Light Pink */
+.table-light-47 { background-color: #fafad2; } /* Light Goldenrod Yellow */
+.table-light-48 { background-color: #f0f8f0; } /* Light Mint */
+.table-light-49 { background-color: #f5f0f0; } /* Light Rose */
+.table-light-50 { background-color: #f5f5dc; } /* Light Beige */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

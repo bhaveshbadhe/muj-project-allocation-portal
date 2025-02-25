@@ -1,0 +1,378 @@
+/* Import Montserrat font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Apply Montserrat font style and underline effect to all heading tags */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(236, 76, 8);
+    display: inline-block; /* Ensures underline is only under text */
+    position: relative;
+}
+
+h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    background-color: #e45f06;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+    animation: draw 0.5s forwards;
+}
+
+@keyframes draw {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+/* Hover effect for headings */
+h1:hover::after, h2:hover::after, h3:hover::after, h4:hover::after, h5:hover::after, h6:hover::after {
+    transform: scaleX(1);
+}
+
+/* Form label styles */
+.form-label {
+    margin-top: 10px;
+    float: left;
+}
+
+
+
+/* Profile card styles */
+.profile-card {
+    max-width: 600px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    transition: transform 0.1s;
+    position: relative;
+    padding: 5px;
+}
+
+/* Profile card styles */
+.card {
+  
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    transition: transform 0.1s;
+    position: relative;
+    padding: 5px;
+}
+.profile-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border: 4px solid #e45f06;
+}
+.profile-card h2 {
+    margin: 20px 0;
+    color: #e45f06;
+    text-align: center;
+}
+.profile-card p, .profile-card label {
+    color: #333;
+    margin: 6px 0;
+}
+.profile-card label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #e45f06;
+}
+
+
+
+
+.search-input {
+    padding: 12px 12px 12px 40px;
+    width: 250px;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+.search-input:focus {
+    border-color: var(--primary-dark);
+}
+.search-wrapper {
+    position: relative;
+}
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+}
+
+   
+  
+
+   :root {
+       --primary-color: #4a4a4a;
+       --secondary-color: #6c757d;
+       --accent-color: #ff6b00;
+       --light-bg: #f8f9fa;
+   }
+
+   body {
+       background-color: var(--light-bg);
+       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+   }
+
+   .dashboard-container {
+       max-width: 1400px;
+       margin: 0 auto;
+       padding: 2rem 1rem;
+   }
+
+   .card-custom {
+       border: none;
+       border-radius: 12px;
+       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+       transition: all 0.3s ease;
+   }
+
+   .card-custom:hover {
+       transform: translateY(-5px);
+       box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+   }
+
+   
+
+
+
+   @media (max-width: 768px) {
+       .dashboard-container {
+           padding: 1rem 0.5rem;
+       }
+   }
+
+
+ 
+
+/* listofproject heding ------------------------------- */
+.project-heading {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.project-heading h3 {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.project-heading .subtitle {
+    color: rgba(255,255,255,0.8);
+    font-size: 1rem;
+}
+.project-icon {
+    margin-right: 12px;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+/*--------------------------- project page styling ----------------------------------- */
+.project-card {
+    max-width: 600px;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Domain Badge Styling */
+.domain-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 6px 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    z-index: 2;
+    border-bottom-left-radius: 8px;
+}
+
+
+
+/* Default color for other domains */
+.domain-badge {
+    background-color: #607D8B;
+}
+
+/* Card Title Styling */
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color:rgb(255, 98, 0);
+    line-height: 1.4;
+}
+
+/* Capacity Badge Styling */
+.capacity-badge {
+    background-color:rgb(255, 153, 10);
+    color:rgb(255, 255, 255);
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+}
+
+/* Project Description Styling */
+.description {
+    color: #607D8B;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.read-more {
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Faculty Info Block Styling */
+.faculty-info {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.project-card:hover .faculty-info {
+    background-color: #f0f4f7;
+}
+
+.faculty-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #607D8B;
+    overflow: hidden;
+}
+
+.faculty-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    .faculty-avatar {
+        width: 60px; 
+        height: 60px;
+    }
+
+    .faculty-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+
+.faculty-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #37474F;
+    margin-bottom: 5px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+/* Progress Bar Styling */
+.capacity-progress .progress {
+    background-color: #ECEFF1;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.capacity-progress .progress-bar {
+    background-color: rgb(255, 98, 0);;
+    border-radius: 8px;
+    transition: width 0.6s ease;
+}
+
+
+
+/* Loading indicator styles */
+#loading-indicator {
+    padding: 20px;
+}
+
+/* Fade-in animation for newly loaded projects */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.project-item {
+    animation: fadeIn 0.5s ease-out;
+    
+}
+
+/* Project card hover effect */
+.project-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Smooth scroll for better UX */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading spinner color to match your orange theme */
+.spinner-border.text-warning {
+    color: orange !important;
+}
+
+/* Disable projects that have reached maximum capacity */
+.project-full {
+    background-color: rgb(255, 0, 0);
+    opacity: 0.6;
+    color: white;
+    pointer-events: none;
+}
+.project-full td, .project-full input[type='radio'] {
+    cursor: not-allowed;
+}

@@ -1,0 +1,21 @@
+database name : project_management_website 
+
+ADMIN LOGIN : 
+
+id = admin_sem1 , password : Admin@123
+id = admin_sem2 , password : Admin@234
+id = admin_sem3 , password : Admin@345
+id = admin_sem4 , password : Admin@456
+id = admin_sem5 , password : Admin@567
+id = admin_sem6 , password : Admin@678
+
+
+faculty login : 
+
+id = muj2024 , password : 12345
+id = muj2027 , password : 12345
+id = muj2028 , password : 12345
+
+student login : 
+
+id = 2293026001 - 229302690  , password : 1234
